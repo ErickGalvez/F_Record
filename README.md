@@ -1,3 +1,11 @@
+
+
+
+
+-Added some interface improvements
+-Added Translated UI in photoshop
+
+Translated original README
 F_Record
 A lightweight Photoshop plugin for recording the drawing process.
 Plugin Principle: It uses Photoshop’s generator interface, capturing images whenever the canvas changes, and then strings them together to generate a video.
