@@ -76,16 +76,24 @@ function startOrStopRecord() {
         }
         csInterface.evalScript(`$._ext.sendToGenerator('${JSON.stringify({ from: 'panel', action: 'start-record' })}')`);
         btn.classList.remove('topcoat-button--cta');
-        btn.innerHTML = 'StopRecording';
+        btn.innerHTML = 'Stop'
+        btn.style.backgroundColor = 'red';
+        btn.style.borderRadius = '5px'
+
+
         document.getElementById("clear-btn").style.display = 'none';
         document.getElementById("output-btn").style.display = 'none';
     } else {
         csInterface.evalScript(`$._ext.sendToGenerator('${JSON.stringify({ from: 'panel', action: 'stop-record' })}')`);
         btn.classList.add('topcoat-button--cta');
         if (document.getElementById("imageCount").innerHTML == "0") {
-            btn.innerHTML = 'StartRecording';
+            btn.innerHTML = 'Start';
+            btn.style.backgroundColor = 'green';
+            btn.style.borderRadius = '5px';  // Square shape
         } else {
-            btn.innerHTML = 'ResumeRecording';
+            btn.innerHTML = 'Resume';
+            btn.style.backgroundColor = 'blue';
+            btn.style.borderRadius = '5px'
         }
         document.getElementById("clear-btn").style.display = 'inline';
         document.getElementById("output-btn").style.display = 'inline';
@@ -102,17 +110,23 @@ function updateSavePath() {
 function updateRecordButtonState(state) {
     const btn = document.getElementById("start-btn");
     switch (state) {
-        case "StartRecording":
-            btn.innerHTML = "StartRecording";
+        case "Start":
+            btn.innerHTML = "Start";
             btn.classList.add("topcoat-button--cta");
+            btn.style.backgroundColor = "green";
+            btn.style.borderRadius = '5px'
             break;
-        case "ResumeRecording":
-            btn.innerHTML = "ResumeRecording";
+        case "Resume":
+            btn.innerHTML = "Resume";
             btn.classList.add("topcoat-button--cta");
+            btn.style.backgroundColor = "blue";
+            btn.style.borderRadius = '5px'
             break;
-        case "StopRecording":
-            btn.innerHTML = "StopRecording";
+        case "Stop":
+            btn.innerHTML = "Stop";
             btn.classList.remove("topcoat-button--cta");
+            btn.style.backgroundColor = "red";
+            btn.style.borderRadius = '5px'
             break;
     }
 }
@@ -120,9 +134,9 @@ function updateRecordButtonState(state) {
 function updateRecordButtonBasedOnImageCount() {
     const imageCount = parseInt(document.getElementById("imageCount").innerHTML, 10);
     if (imageCount === 0) {
-        updateRecordButtonState("StartRecording");
+        updateRecordButtonState("Start");
     } else {
-        updateRecordButtonState("ResumeRecording");
+        updateRecordButtonState("Resume");
     }
 }
 
@@ -156,10 +170,10 @@ function loadImageCount() {
     document.getElementById("imageCount").innerHTML = imageFiles.length;
     if (document.getElementById("start-btn").classList.contains('topcoat-button--cta')) {
         if (imageFiles.length == 0) {
-            document.getElementById("start-btn").innerHTML = "StartRecording";
+            document.getElementById("start-btn").innerHTML = "Start";
         }
         else {
-            document.getElementById("start-btn").innerHTML = "ResumeRecording";
+            document.getElementById("start-btn").innerHTML = "Resume";
         }
     }
 }

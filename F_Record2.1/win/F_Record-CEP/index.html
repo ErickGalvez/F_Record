@@ -42,29 +42,26 @@
 </head>
 
 <body id="body">
+    <button id="start-btn" onclick="startOrStopRecord()" class="topcoat-button--cta" style="width: 80px;height: 50px;font-size: 12px;">Rec</button>
+    <button id="clear-btn" onclick="clearProcessImages()" class="topcoat-button--cta" style="width: 150px;height: 50px;font-size: 12px;">Clear recorded frames</button>
+    <button id="output-btn" onclick="outputVideo()" class="topcoat-button--cta" style="width: 150px;height: 50px;font-size: 12px;">Export Video</button>
     <br><br>
-    <label for="rootPath">rootPath</label>
-    <input type="text" id="rootPath" name="rootPath" oninput="updateRootPath()" style="width: 200px;float: right;">
-    <br><br>
+    <label for="rootPath" style="font-size:12px">Root path:</label>
+    <input type="text" id="rootPath" name="Root path" oninput="updateRootPath()" style="width: 300px; font-size: 12px; border-radius: 4px; ">
     <br>
-    <button id="start-btn" onclick="startOrStopRecord()" class="topcoat-button--cta" style="width: 100px;height: 50px;font-size: 20px;">startOrStopRecord</button>
-    <button id="clear-btn" onclick="clearProcessImages()" class="topcoat-button--cta" style="width: 100px;height: 50px;font-size: 20px;">clearProcessImages</button>
-    <button id="output-btn" onclick="outputVideo()" class="topcoat-button--cta" style="width: 100px;height: 50px;font-size: 20px;float: right;">outputVideo</button>
-    <br><br>
-    <button id="add-folder-btn" onclick="addFolder()" class="topcoat-button--cta" style="width: 150px;height: 50px;font-size: 20px;">Add Folder</button>
-    <br><br>
-    <label for="savePath">savePath</label>
-    <input type="text" id="savePath" name="savePath" oninput="updateSavePath()" style="width: 400px;float: left;" disabled>
+    <label for="savePath" style="font-size:12px">Save path</label>
+    <input type="text" id="savePath" name="Save path:" oninput="updateSavePath()" style="width: 300px; font-size: 12px;" disabled>
+    <button id="add-folder-btn" onclick="addFolder()" class="topcoat-button--cta" style="width: 20px; height: 20px; font-size: 20px; justify-content: center; align-items: center; border: none; padding: 0;">+</button>
     <br><br>
     <label for="imageCount">imageCount</label>
-    <span class="number" id="imageCount" name="imageCount" style="float: right;">0</span>
-    <br><br>
+    <span class="number" id="imageCount" name="imageCount">0</span>
+    <br>
     <label for="minRecordInterval">MinRecordInterval</label>
-    <input type="number" id="minRecordInterval" name="minRecordInterval" style="width: 60px;float: right;" oninput="updateMinRecordInterval()">
-    <br><br>
+    <input type="number" id="minRecordInterval" name="minRecordInterval" style="width: 60px;" oninput="updateMinRecordInterval()">
+    <br>
     <label for="videoDuration">videoDuration</label>
-    <input type="number" id="videoDuration" name="videoDuration" style="width: 60px;float: right;" oninput="updateVideoDuration()">
-    <br><br>
+    <input type="number" id="videoDuration" name="videoDuration" style="width: 60px;" oninput="updateVideoDuration()">
+    <br>
     <span id="author" name="author" style="float: right;vertical-align: bottom;font-size: 10;">作者 F_know</span>
 
     <!-- Ensure the scripts are loaded after the DOM is ready -->
