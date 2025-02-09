@@ -1,8 +1,14 @@
-
+Working on: 
+  more UI improvements
+  extend the folder funcionality
+  
+update:2/9/2025: Improved UI legibility
+![ss](https://github.com/user-attachments/assets/ac9c96a7-e7c7-4ab6-884a-f484d32734c6)
 
 update:2/8/2025: Added a create folder feature to speed up workflow
 
--Added some interface improvements
+-Added some interface improvements![Uploading ss.png…]()
+
 
 -Added Translated UI in photoshop
 
