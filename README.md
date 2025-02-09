@@ -7,7 +7,7 @@ update:2/9/2025: Improved UI legibility
 
 update:2/8/2025: Added a create folder feature to speed up workflow
 
--Added some interface improvements![Uploading ss.png…]()
+-Added some interface improvements
 
 
 -Added Translated UI in photoshop
