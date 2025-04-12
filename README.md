@@ -4,10 +4,10 @@ Working on:
   -multiple tab support (soon)
   
   
-update:2/9/2025: Improved UI legibility
+-update:2/9/2025: Improved UI legibility
 ![ss](https://github.com/user-attachments/assets/ac9c96a7-e7c7-4ab6-884a-f484d32734c6)
-update:2/8/2025: Added a create folder feature to speed up workflow
-update:4/12/2025: WIP: Improving logic of add folder button and interaction with record button
+-update:2/8/2025: Added a create folder feature to speed up workflow
+-update:4/12/2025: WIP: Improving logic of add folder button and interaction with record button
 
 -Added some interface improvements
 
